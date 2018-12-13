@@ -39,8 +39,12 @@ public func routes(_ router: Router) throws {
         return "Hello, world!"
     }
 
-    //MARK:- Acronym router
+    // MARK:- Acronym router
     let acronymsController = AcronymsController()
     try router.register(collection: acronymsController)
+
+    // MARK:- User router
+    let usersController = UsersController()
+    try router.register(collection: usersController)
 
 }
